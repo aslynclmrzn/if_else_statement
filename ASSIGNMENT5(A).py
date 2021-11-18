@@ -27,38 +27,43 @@ def gwaDescription():
 gwaA, gwaB, gwaC, gwaD, gwaE, gwaF, gwaG, gwaH, gwaI, gwaJ = gwaEquivalent()
 DescriptionA, DescriptionB, DescriptionC, DescriptionD, DescriptionE, DescriptionF = gwaDescription()
 # Then create a program that display the equivalent Grade/Mark and Description as an output.
+# Conditional statement in rounding off grade percentage
 import math
-grade = math.ceil(gradePercentage)
-if  grade>=96 and grade<=100:
+if float (gradePercentage%2>=0.5):
+    grade = math.ceil(gradePercentage)
+elif float (gradePercentage%2<=0.5):
+    grade = round(gradePercentage)
+# Conditional statement for the grade equivalent and description of grade percentage.
+if grade>=97 and grade<=100:
     print(f"Grade/Mark: {gwaA}")
     print(F"Description: {DescriptionA}")
-elif grade>=94 and grade<=96:
+elif 96>=grade>=94:
     print(f"Grade/Mark: {gwaB}")
     print(F"Description: {DescriptionA}")
-elif grade>=91 and grade<=93:
+elif 93>=grade>=91:
     print(f"Grade/Mark: {gwaC}")
     print(F"Description: {DescriptionB}")
-elif grade>=88 and grade<=90:
+elif 90>=grade>=88:
     print(f"Grade/Mark: {gwaD}")
     print(F"Description: {DescriptionB}")
-elif grade>=85 and grade<=87:
+elif 87>=grade>=85:
     print(f"Grade/Mark: {gwaE}")
     print(F"Description: {DescriptionC}")
-elif grade>=82 and grade<=84:
+elif 84>=grade>=82:
     print(f"Grade/Mark: {gwaF}")
     print(F"Description: {DescriptionC}")
-elif grade>=79 and grade<=81:
+elif 81>=grade>=79:
     print(f"Grade/Mark: {gwaG}")
     print(F"Description: {DescriptionD}")
-elif grade>=76 and grade<=78:
+elif 78>=grade>=76:
     print(f"Grade/Mark: {gwaH}")
     print(F"Description: {DescriptionD}")
-elif 75<=grade:
+elif 75<=grade==75:
     print(f"Grade/Mark: {gwaI}")
     print(F"Description: {DescriptionE}")
-elif grade>=65:
+elif 74>=grade>=65:
     print(f"Grade/Mark: {gwaJ}")
     print(F"Description: {DescriptionF}")
 else: 
     print("Invalid Input")
-# Finally, run the entire peogram and know the value of your grade percenatage and the description.
+# Finally, run the entire program and know the value of your grade percentage and the description.
